@@ -27,6 +27,8 @@
         return '<button type="button" class="dropdown-item" data-value="' + item.value + '">' + label + '</button>';
     }
     function createItems(field, opts) {
+        if (!opts.source)
+            return 0;
         var lookup = field.val();
         if (lookup.length < opts.treshold) {
             field.dropdown('hide');
@@ -102,10 +104,8 @@
                 // feching data...
                 var lookup = _field.val().toString();
                 opts.fetchSource(lookup).then(function (res) {
-                    console.log(res);
                     opts.source = res;
                     if (createItems(_field, opts) > 0) {
-                        console.log('dropdown.show');
                         _field.dropdown('show');
                     }
                     else {
@@ -123,12 +123,6 @@
                     _field.click();
                 }
             }
-            // if (createItems(_field, opts) > 0) {
-            //     _field.dropdown('show');
-            // } else {
-            //     // sets up positioning
-            //     _field.click();
-            // }
         });
         return this;
     };

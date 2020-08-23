@@ -52,6 +52,9 @@ interface JQuery {
     }
 
     function createItems(field: JQuery<HTMLElement>, opts: AutocompleteOptions) {
+        if (!opts.source)
+            return 0;
+
         const lookup = field.val() as string;
         if (lookup.length < opts.treshold) {
             field.dropdown('hide');
@@ -137,10 +140,8 @@ interface JQuery {
                 // feching data...
                 const lookup = _field.val().toString();
                 opts.fetchSource(lookup).then((res) => {
-                    console.log(res);
                     opts.source = res;
                     if (createItems(_field, opts) > 0) {
-                        console.log('dropdown.show');
                         _field.dropdown('show');
                     }
                     else {
@@ -157,12 +158,6 @@ interface JQuery {
                     _field.click();
                 }
             }
-            // if (createItems(_field, opts) > 0) {
-            //     _field.dropdown('show');
-            // } else {
-            //     // sets up positioning
-            //     _field.click();
-            // }
         });
 
         return this;
