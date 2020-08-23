@@ -3,15 +3,23 @@
         treshold: 4,
         maximumItems: 5,
         highlightTyped: true,
-        highlightClass: 'text-primary'
+        highlightClass: 'text-primary',
+        startsWith: false,
+        "class": ''
     };
     function createItem(lookup, item, opts) {
         var label;
         if (opts.highlightTyped) {
-            var idx = item.label.toLowerCase().indexOf(lookup.toLowerCase());
-            label = item.label.substring(0, idx)
-                + '<span class="' + opts.highlightClass + '">' + item.label.substring(idx, idx + lookup.length) + '</span>'
-                + item.label.substring(idx + lookup.length, item.label.length);
+            if (opts.startsWith) {
+                label = '<span class="' + opts.highlightClass + '">' + item.label.substring(0, lookup.length) + '</span>'
+                    + item.label.substring(lookup.length, item.label.length);
+            }
+            else {
+                var idx = item.label.toLowerCase().indexOf(lookup.toLowerCase());
+                label = item.label.substring(0, idx)
+                    + '<span class="' + opts.highlightClass + '">' + item.label.substring(idx, idx + lookup.length) + '</span>'
+                    + item.label.substring(idx + lookup.length, item.label.length);
+            }
         }
         else {
             label = item.label;
@@ -35,9 +43,16 @@
                 label: opts.label ? object[opts.label] : key,
                 value: opts.value ? object[opts.value] : object
             };
-            if (item.label.toLowerCase().indexOf(lookup.toLowerCase()) >= 0) {
+            var compare;
+            if (opts.startsWith) {
+                compare = item.label.toLowerCase().startsWith(lookup.toLowerCase());
+            }
+            else {
+                compare = item.label.toLowerCase().indexOf(lookup.toLowerCase()) >= 0;
+            }
+            if (compare) {
                 items.append(createItem(lookup, item, opts));
-                if (++count >= opts.maximumItems) {
+                if (opts.maximumItems && ++count >= opts.maximumItems) {
                     break;
                 }
             }
@@ -69,7 +84,9 @@
         _field.parent().addClass('dropdown');
         _field.attr('data-toggle', 'dropdown');
         _field.addClass('dropdown-toggle');
-        _field.after('<div class="dropdown-menu"></div>');
+        var dropdown = $('<div class= "dropdown-menu" ></div>');
+        dropdown.addClass(opts["class"]);
+        _field.after(dropdown);
         _field.dropdown(opts.dropdownOptions);
         this.off('click.autocomplete').click('click.autocomplete', function (e) {
             if (createItems(_field, opts) == 0) {

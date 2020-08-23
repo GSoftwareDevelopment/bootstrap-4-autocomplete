@@ -12,6 +12,8 @@ interface AutocompleteOptions {
     source?: object;
     treshold?: number;
     value?: string;
+    startsWith?: boolean;
+    class?: string;
 }
 interface JQuery {
     autocomplete(options: AutocompleteOptions): JQuery<HTMLElement>;

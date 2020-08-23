@@ -1,5 +1,8 @@
 ## Change Log
 
+### (2020-08-23)
+- add two configurable options
+
 ### v1.2.3 (2020-04-28)
 - Fixed vulnerability (dependency)
 

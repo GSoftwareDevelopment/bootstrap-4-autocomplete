@@ -87,6 +87,12 @@ The number of characters that need to be typed on the input in order to trigger 
 **value**:  
 Where to find the value on your source.
 
+**startsWith**:
+Force a comparison of values from the beginning of the key string
+    Default is false
+
+**class**:
+Ability to add a class for the dropdown-menu item
 
 
 ## How it works

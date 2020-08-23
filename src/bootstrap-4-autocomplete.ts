@@ -13,28 +13,38 @@ interface AutocompleteOptions {
     source?: object,
     treshold?: number,
     value?: string,
+    startsWith?: boolean,
+    class?: string,
+
 }
 
 interface JQuery {
     autocomplete(options: AutocompleteOptions): JQuery<HTMLElement>;
 }
 
-(function ( $ ) {
+(function ($) {
 
     let defaults: AutocompleteOptions = {
         treshold: 4,
         maximumItems: 5,
         highlightTyped: true,
         highlightClass: 'text-primary',
+        startsWith: false,
+        class: '',
     };
 
-    function createItem(lookup: string, item: AutocompleteItem, opts: AutocompleteOptions):string {
+    function createItem(lookup: string, item: AutocompleteItem, opts: AutocompleteOptions): string {
         let label: string;
         if (opts.highlightTyped) {
-            const idx = item.label.toLowerCase().indexOf(lookup.toLowerCase());
-            label = item.label.substring(0, idx)
+            if (opts.startsWith) {
+                label = '<span class="' + opts.highlightClass + '">' + item.label.substring(0, lookup.length) + '</span>'
+                    + item.label.substring(lookup.length, item.label.length);
+            } else {
+                var idx = item.label.toLowerCase().indexOf(lookup.toLowerCase());
+                label = item.label.substring(0, idx)
                     + '<span class="' + opts.highlightClass + '">' + item.label.substring(idx, idx + lookup.length) + '</span>'
                     + item.label.substring(idx + lookup.length, item.label.length);
+            }
         } else {
             label = item.label;
         }
@@ -58,18 +68,24 @@ interface JQuery {
             const object = opts.source[key];
             const item = {
                 label: opts.label ? object[opts.label] : key,
-                value: opts.value ? object[opts.value]: object,
+                value: opts.value ? object[opts.value] : object,
             };
-            if (item.label.toLowerCase().indexOf(lookup.toLowerCase()) >= 0) {
+            var compare: boolean;
+            if (opts.startsWith) {
+                compare = item.label.toLowerCase().startsWith(lookup.toLowerCase());
+            } else {
+                compare = item.label.toLowerCase().indexOf(lookup.toLowerCase()) >= 0;
+            }
+            if (compare) {
                 items.append(createItem(lookup, item, opts));
-                if (++count >= opts.maximumItems) {
+                if (opts.maximumItems && ++count >= opts.maximumItems) {
                     break;
                 }
             }
         }
 
         // option action
-        field.next().find('.dropdown-item').click(function() {
+        field.next().find('.dropdown-item').click(function () {
             field.val($(this).text());
             if (opts.onSelectItem) {
                 opts.onSelectItem({
@@ -82,7 +98,7 @@ interface JQuery {
         return items.children().length;
     }
 
-    $.fn.autocomplete = function(options) {
+    $.fn.autocomplete = function (options) {
         // merge options with default
         let opts: AutocompleteOptions = {};
         $.extend(opts, defaults, options);
@@ -95,15 +111,19 @@ interface JQuery {
         _field.removeClass('dropdown-toggle');
         _field.parent().find('.dropdown-menu').remove();
         _field.dropdown('dispose');
-        
+
         // attach dropdown
         _field.parent().addClass('dropdown');
         _field.attr('data-toggle', 'dropdown');
         _field.addClass('dropdown-toggle');
-        _field.after('<div class="dropdown-menu"></div>');
+
+        const dropdown = $('<div class= "dropdown-menu" ></div>');
+        dropdown.addClass(opts.class);
+        _field.after(dropdown);
+
         _field.dropdown(opts.dropdownOptions);
-        
-        this.off('click.autocomplete').click('click.autocomplete', function(e) {
+
+        this.off('click.autocomplete').click('click.autocomplete', function (e) {
             if (createItems(_field, opts) == 0) {
                 // prevent show empty
                 e.stopPropagation();
@@ -112,7 +132,7 @@ interface JQuery {
         });
 
         // show options
-        this.off('keyup.autocomplete').keyup('keyup.autocomplete', function() {
+        this.off('keyup.autocomplete').keyup('keyup.autocomplete', function () {
             if (createItems(_field, opts) > 0) {
                 _field.dropdown('show');
             } else {
@@ -123,4 +143,4 @@ interface JQuery {
 
         return this;
     };
-}( jQuery ));
+}(jQuery));
