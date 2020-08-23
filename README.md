@@ -94,6 +94,12 @@ Force a comparison of values from the beginning of the key string
 **class**:
 Ability to add a class for the dropdown-menu item
 
+**fetchSource**:
+With the help of this variable, you can define a callback function that will retrieve information, e.g. from your API. The function parameter is the value from the field to which the component is attached.
+The returned content is like a **source** variable.
+The function is fired with every change in the input field.
+
+See _example/etchingSource-example.html_ how it works.
 
 ## How it works
 
