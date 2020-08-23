@@ -15,7 +15,7 @@ interface AutocompleteOptions {
     value?: string,
     startsWith?: boolean,
     class?: string,
-
+    fetchSource?: (lookup: string) => Promise<any>
 }
 
 interface JQuery {
@@ -133,12 +133,36 @@ interface JQuery {
 
         // show options
         this.off('keyup.autocomplete').keyup('keyup.autocomplete', function () {
-            if (createItems(_field, opts) > 0) {
-                _field.dropdown('show');
+            if (opts.fetchSource) {
+                // feching data...
+                const lookup = _field.val().toString();
+                opts.fetchSource(lookup).then((res) => {
+                    console.log(res);
+                    opts.source = res;
+                    if (createItems(_field, opts) > 0) {
+                        console.log('dropdown.show');
+                        _field.dropdown('show');
+                    }
+                    else {
+                        // sets up positioning
+                        _field.click();
+                    }
+                });
             } else {
-                // sets up positioning
-                _field.click();
+                if (createItems(_field, opts) > 0) {
+                    _field.dropdown('show');
+                }
+                else {
+                    // sets up positioning
+                    _field.click();
+                }
             }
+            // if (createItems(_field, opts) > 0) {
+            //     _field.dropdown('show');
+            // } else {
+            //     // sets up positioning
+            //     _field.click();
+            // }
         });
 
         return this;

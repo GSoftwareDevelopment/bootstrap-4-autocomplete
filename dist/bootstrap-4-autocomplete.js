@@ -5,7 +5,7 @@
         highlightTyped: true,
         highlightClass: 'text-primary',
         startsWith: false,
-        class: '',
+        "class": ''
     };
     function createItem(lookup, item, opts) {
         var label;
@@ -13,7 +13,8 @@
             if (opts.startsWith) {
                 label = '<span class="' + opts.highlightClass + '">' + item.label.substring(0, lookup.length) + '</span>'
                     + item.label.substring(lookup.length, item.label.length);
-            } else {
+            }
+            else {
                 var idx = item.label.toLowerCase().indexOf(lookup.toLowerCase());
                 label = item.label.substring(0, idx)
                     + '<span class="' + opts.highlightClass + '">' + item.label.substring(idx, idx + lookup.length) + '</span>'
@@ -45,7 +46,8 @@
             var compare;
             if (opts.startsWith) {
                 compare = item.label.toLowerCase().startsWith(lookup.toLowerCase());
-            } else {
+            }
+            else {
                 compare = item.label.toLowerCase().indexOf(lookup.toLowerCase()) >= 0;
             }
             if (compare) {
@@ -82,8 +84,8 @@
         _field.parent().addClass('dropdown');
         _field.attr('data-toggle', 'dropdown');
         _field.addClass('dropdown-toggle');
-        const dropdown = $('<div class= "dropdown-menu" ></div>');
-        dropdown.addClass(opts.class);
+        var dropdown = $('<div class= "dropdown-menu" ></div>');
+        dropdown.addClass(opts["class"]);
         _field.after(dropdown);
         _field.dropdown(opts.dropdownOptions);
         this.off('click.autocomplete').click('click.autocomplete', function (e) {
@@ -96,13 +98,37 @@
         });
         // show options
         this.off('keyup.autocomplete').keyup('keyup.autocomplete', function () {
-            if (createItems(_field, opts) > 0) {
-                _field.dropdown('show');
+            if (opts.fetchSource) {
+                // feching data...
+                var lookup = _field.val().toString();
+                opts.fetchSource(lookup).then(function (res) {
+                    console.log(res);
+                    opts.source = res;
+                    if (createItems(_field, opts) > 0) {
+                        console.log('dropdown.show');
+                        _field.dropdown('show');
+                    }
+                    else {
+                        // sets up positioning
+                        _field.click();
+                    }
+                });
             }
             else {
-                // sets up positioning
-                _field.click();
+                if (createItems(_field, opts) > 0) {
+                    _field.dropdown('show');
+                }
+                else {
+                    // sets up positioning
+                    _field.click();
+                }
             }
+            // if (createItems(_field, opts) > 0) {
+            //     _field.dropdown('show');
+            // } else {
+            //     // sets up positioning
+            //     _field.click();
+            // }
         });
         return this;
     };

@@ -14,6 +14,7 @@ interface AutocompleteOptions {
     value?: string;
     startsWith?: boolean;
     class?: string;
+    fetchSource?: (lookup: string) => Promise<any>;
 }
 interface JQuery {
     autocomplete(options: AutocompleteOptions): JQuery<HTMLElement>;
