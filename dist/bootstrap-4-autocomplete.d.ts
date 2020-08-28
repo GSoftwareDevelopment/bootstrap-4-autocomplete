@@ -6,14 +6,15 @@ interface AutocompleteOptions {
     dropdownOptions?: Bootstrap.DropdownOption;
     highlightClass?: string;
     highlightTyped?: boolean;
-    label?: string;
+    labelClass?: string;
+    dropdownClass?: string;
     maximumItems?: number;
-    onSelectItem?: (item: AutocompleteItem, element: HTMLElement) => void;
-    source?: object;
+    onRenderItem?: (item: AutocompleteItem, element: JQuery<HTMLElement>) => void;
+    onSelectItem?: (item: AutocompleteItem, element: JQuery<HTMLElement>) => void;
+    source?: Array<AutocompleteItem>;
     treshold?: number;
-    value?: string;
-    startsWith?: boolean;
-    class?: string;
+    compareFn?: (lookup: string, item: AutocompleteItem) => boolean;
+    fetchTime?: number;
     fetchSource?: (lookup: string) => Promise<any>;
 }
 interface JQuery {
