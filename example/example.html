@@ -1,52 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
-    <title>Bootstrap 4 Autocomple Example</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>Bootstrap Autocomple Component Example by PeBe</title>
 </head>
+<style>
+    .container {
+        padding-top: 4em;
+        padding-bottom: 4em;
+    }
+
+    .page {
+        min-height: calc(100vh);
+        padding-bottom: 0;
+    }
+
+    .myColor {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        border: #000 solid 1px;
+        margin-right: 5px;
+    }
+
+    .scrolled-dropdown {
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    .code {
+        border-bottom: #ddd solid 1px;
+    }
+
+    pre {
+        margin-bottom: 0;
+        padding-left: 3em;
+        padding-bottom: 0;
+        border-left: #888 solid 5px;
+        max-height: 300px;
+        color: #888;
+    }
+</style>
+
 <body>
-    <div class="container">
-        <div id="parent" class="form-group">
-            <label for="myAutocomplete">Bootstrap 4 Autocomplete</label>
-            <input type="text" id="myAutocomplete" class="form-control"></input>
+    <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-lg shadow">
+        <a class="navbar-brand" href="#">GSD/Autocomplete</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#usage">Usage</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Examples
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#example-basic">Basic usage</a>
+                        <a class="dropdown-item" href="#example-render">Custom render</a>
+                        <a class="dropdown-item" href="#example-fetch">Fetch source</a>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div id="output"></div>
+    </nav>
+
+    <div id="home" class="page bg-info text-white">
+        <div class="container">
+            <div class="jumbotron text-dark mt-5">
+                <h1 class="display-4">Simple & lightweight<br>Autocomplete</h1>
+                <p class="lead">Make life easer with ease autocomplete component</p>
+                <hr class="my-4">
+                <a class="btn btn-primary btn-lg" href="#example-basic" role="button">See examples</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="bg-light">
+        <div class="container">
+            <h2>About</h2>
+            <p>Simple to use and lightweight autocomplete/typeahead for Bootstrap 4 and jQuery.</p>
+            <p>It uses the default Dropdown component from Bootstrap 4 to create the list of autocomplete items.</p>
+            <p>Originally, I expanded the capabilities of the <a
+                    href="https://github.com/Honatas/bootstrap-4-autocomplete" target="_blank">honatas /
+                    bootstrap-4-autocomplete</a> component, but I decided to make my
+                own project out of it.</p>
+        </div>
+    </div>
+
+    <div id="usage" class="bg-white">
+        <div class="container">
+            <h2>Usage</h2>
+            <p>Having a defined text field with the identifier "myAutocomplete" you can:</p>
+            <pre>$('#myAutocomplete').autocomplete(options);</pre>
+            <p>Options is a JSON object with the following attributes (in alphabetical order):</p>
+
+            <dl class="row">
+                <dt class="col-sm-3">compareFn<span class="ml-1 badge badge-info">New</span></dt>
+                <dd class="col-sm-9">
+                    <p>By default, the process of generating a dropdown list is based on checking whether the text
+                        entered in the text field is
+                        contained in any of the elements of the autocomplete list. In short, the condition is:</p>
+                    <code>
+compare = item.label.toLowerCase().indexOf(lookup.toLowerCase()) >= 0;
+                    </code>
+                    <p>Where:
+                    <dl class="row">
+                        <dt class="col-sm-2">item</dt>
+                        <dd class="col-sm-10">current autocomplete item</dd>
+
+                        <dt class="col-sm-2">lookup</dt>
+                        <dd class="col-sm-10">string from text input</dd>
+                    </dl>
+                    </p>
+                    <p>By defining a callback function, you can define your own rules for selecting items for the
+                        dropdown
+                        list, e.g.</p>
+                    <pre>
+const myCompareFn=(lookup,item) =&gt; item.label.toLowerCase().startsWith(lookup.toLowerCase());
+
+$('#myAutocomplete').autocomplete({
+    compareFn:myCompareFn
+})
+</pre>
+                    <p>
+                        in the example above, dropdown list items will be matched by comparing them strings
+                        from the beginning.
+                    </p>
+                </dd>
+
+                <dt class="col-sm-3">dropdownClass<span class="ml-1 badge badge-info">New</span></dt>
+                <dd class="col-sm-9">
+                    <p>It allows you to assign your own CSS class to the native dropdown-menu element.</p>
+                </dd>
+
+                <dt class="col-sm-3 text-muted">dropdownOptions</dt>
+                <dd class="col-sm-9">
+                    It's the same options from Bootstrap's Dropdown, documented <a
+                        href="https://getbootstrap.com/docs/4.3/components/dropdowns/#options" target="_blank">here</a>.
+                </dd>
+
+                <dt class="col-sm-3">fetchTime<span class="ml-1 badge badge-info">New</span></dt>
+                <dd class="col-sm-9">
+                    <p>Time (expressed in milliseconds) for the delay until the execution of the onFetchData function.
+                    </p>
+                    <p><b>Default is 500 milisecounds</b></p>
+                </dd>
+
+                <dt class="col-sm-3 text-muted">highlightClass</dt>
+                <dd class="col-sm-9">
+                    <p>The class to use when highlighting typed text on items. Only used when highlightTyped is true.
+                    </p>
+                    <p><b>Default is text-primary.</b></p>
+                </dd>
+
+                <dt class="col-sm-3 text-muted">highlightTyped</dt>
+                <dd class="col-sm-9">
+                    <p>Wether to highlight (style) typed text on items.</p>
+                    <p><b>Default is true.</b></p>
+                </dd>
+
+                <dt class="col-sm-3">labelClass<span class="ml-1 badge badge-info">New</span></dt>
+                <dd class="col-sm-9">
+                    <p>The name of the CSS class that will be added to the dropdown-item.</p>
+                </dd>
+
+                <dt class="col-sm-3">maximumItems<span class="ml-1 badge badge-danger">Change</span></dt>
+                <dd class="col-sm-9">
+                    <p>How many items you want to show when the autocomplete is displayed.</p>
+                    <p>Note: If the value is set to 0 (zero) all matching results will be displayed.</p>
+                    <p><b>Default is 5.</b></p>
+                </dd>
+
+                <dt class="col-sm-3">onFetchSource<span class="ml-1 badge badge-info">New</span></dt>
+                <dd class="col-sm-9">
+                    <p>The callback function that is called when text is entered in a text field. Its purpose is to
+                        allow you to generate an
+                        auto-complete list by sending a request.</p>
+
+                    <h5>Parameters and returns:</h5>
+                    <p>A parameter with the content from the text field is passed to the function.</p>
+                    <p>The function returns an array of objects (see the description of the source property)</p>
+
+                    <p>More detailed description in the example further on the page.</p>
+                </dd>
+
+                <dt class="col-sm-3">onRenderItem<span class="ml-1 badge badge-info">New</span></dt>
+                <dd class="col-sm-9">
+                    <p>The callback function that is called on each matching autocomplete list item. It allows you to
+                        program your own way of rendering list items.</p>
+                    <h5>Parameters:</h5>
+                    <p>The functions passed are the current (matching) autocomplete list item and the HTML dropdown list
+                        item.</p>
+
+                    <p><a href="#">More in the example.</a></p>
+
+                    </p>
+                </dd>
+
+                <dt class="col-sm-3 text-muted">onSelectItem</dt>
+                <dd class="col-sm-9">
+                    <p>A callback that is fired every time an item is selected.</p>
+                    <h4>Parameters:</h4>
+                    <p>It receives two parameters: the first is the selected item, the second is the textfield element.
+                    </p>
+                    <p>Note that you don't have to use this callback to set the text in the textfield, this is done
+                        automatically.</p>
+                </dd>
+
+                <dt class="col-sm-3">source<span class="ml-1 badge badge-danger">Change</span></dt>
+                <dd class="col-sm-9">
+                    <p>The data from where autocomplete will lookup items to show. This data has to be a JSON array of
+                        objects. The default format for this object is:</p>
+                    <pre>
+[
+    {
+        "label": "label one",
+        "value": 1
+    },
+    {
+        "label": "label two",
+        "value": 2
+    },
+    ...
+]
+                    </pre>
+                </dd>
+
+                <dt class="col-sm-3 text-muted">treshold</dt>
+                <dd class="col-sm-9">
+                    <p>The number of characters that need to be typed on the input in order to trigger the autocomplete.
+                    </p>
+                    <p><b>Default is 4.</b></p>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div id="example-basic" class="page bg-light">
+        <div class="container">
+            <h3>Basic usage:</h3>
+            <div class="form-group">
+                <label for="myColor1">Enter color you like:</label>
+                <input tabindex=1 type="text" id="myColor1" autocomplete="off" class="form-control" />
+            </div>
+
+            <hr>
+
+            <div class="nav nav-tabs" role="tablist">
+                <a href="#desc-basic" class="nav-link active" data-toggle="list" role="tab">Description</a>
+                <a href="#html-basic" class="nav-link" data-toggle="list" role="tab">HTML</a>
+                <a href="#js-basic" class="nav-link" data-toggle="list" role="tab">JS</a>
+                <a href="#css-basic" class="nav-link" data-toggle="list" role="tab">CSS</a>
+            </div>
+            <div class="tab-content code">
+                <div id="desc-basic" class="tab-pane fade show active" role="tabpanel">
+                    <div>
+                        <p>Basic usage of the extension is based on statically defined data. Definition of the variable
+                            <code class="text-muted">color</code> is included as an external file <a href="./colors.js"
+                                target="_blank">./colors.js</a>.</p>
+                        <p>The extension options are set so that the drop-down box shows all possible results
+                            <code class="text-muted">maximumItems: 0</code>
+                            and allows you to scroll through that list <code
+                                class="text-muted">dropdownClass: 'scrolled-dropdown'</code>.</p>
+                    </div>
+                </div>
+                <div id="html-basic" class="tab-pane fade" role="tabpanel">
+                    <pre>
+&lt;script src="./colors.js"&gt;&lt;/script&gt;
+
+&lt;div class="form-group"&gt;
+    &lt;label for="myAutocomplete"&gt;Enter color you like:&lt;/label&gt;
+    &lt;input type="text" id="myAutocomplete" autocomplete="off" class="form-control" /&gt;
+&lt;/div&gt;</pre>
+                </div>
+
+                <pre id="js-basic" class="tab-pane fade" role="tabpanel">
+$('#myAutocomplete').autocomplete({
+    source: colors,
+    treshold: 1,
+    maximumItems: 0,
+    highlightClass: 'text-danger',
+    dropdownClass: 'scrolled-dropdown'
+});</pre>
+
+                <pre id="css-basic" class="tab-pane fade" role="tabpanel">
+.scrolled-dropdown {
+    max-height: 200px;
+    overflow-y: auto;
+}</pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="example-render" class="page">
+        <div class="container">
+            <h3>Custom dropdown item element render:</h3>
+            <div class="form-group">
+                <label for="myColor2">Enter color you like:</label>
+                <input tabindex=2 type="text" id="myColor2" autocomplete="off" class="form-control" />
+            </div>
+
+            <hr>
+
+            <div class="nav nav-tabs" role="tablist">
+                <a href="#desc-render" class="nav-link active" data-toggle="list" role="tab"
+                    aria-controls="desc">Description</a>
+                <a href="#html-render" class="nav-link" data-toggle="list" role="tab" aria-controls="html">HTML</a>
+                <a href="#js-render" class="nav-link" data-toggle="list" role="tab" aria-controls="js">JS</a>
+                <a href="#css-render" class="nav-link" data-toggle="list" role="tab" aria-controls="css">CSS</a>
+            </div>
+            <div class="tab-content code">
+                <div id="desc-render" class="tab-pane fade show active" role="tabpanel">
+                    <div class="alert alert-info">
+                        <p class="mb-0">Due to the large size of the file, the definition of the variable
+                            'color' is
+                            included as an
+                            external file. You can see
+                            it <a href="./colors.js" target="_blank">here</a>.</p>
+                    </div>
+                </div>
+                <div id="html-render" class="tab-pane fade" role="tabpanel">
+                    <pre>
+&lt;script src="./colors.js"&gt;&lt;/script&gt;
+
+&lt;div class="form-group"&gt;
+    &lt;label for="myAutocomplete"&gt;Enter color you like:&lt;/label&gt;
+    &lt;input type="text" id="myAutocomplete" autocomplete="off" class="form-control" /&gt;
+&lt;/div&gt;</pre>
+                </div>
+
+                <pre id="js-render" class="tab-pane fade" role="tabpanel">
+$('#myAutocomplete').autocomplete({
+    source: colors,
+    treshold: 1,
+    highlightClass: 'text-danger',
+    onRenderItem: (item, html) =&gt; {
+        let colorBox = $('&lt;span class="myColor" /&gt;').css('background-color', item.value);
+        html.prepend(colorBox);
+    }
+});</pre>
+
+                <pre id="css-render" class="tab-pane fade" role="tabpanel">
+.myColor {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: #000 solid 1px;
+    margin-right: 5px;
+}</pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="example-fetch" class="page bg-light">
+        <div class="container">
+            <h3>Fetch source data for autocomplete:</h3>
+            <div class="form-group">
+                <label for="myCountry">Enter Your country:</label>
+                <input tabindex=3 type="text" id="myCountry" autocomplete="off" class="form-control" />
+            </div>
+
+            <hr>
+
+            <div class="nav nav-tabs" role="tablist">
+                <a href="#desc-fetch" class="nav-link active" data-toggle="list" role="tab"
+                    aria-controls="desc">Description</a>
+                <a href="#html-fetch" class="nav-link" data-toggle="list" role="tab" aria-controls="html">HTML</a>
+                <a href="#js-fetch" class="nav-link" data-toggle="list" role="tab" aria-controls="js">JS</a>
+                <a href="#css-fetch" class="nav-link" data-toggle="list" role="tab" aria-controls="css">CSS</a>
+            </div>
+            <div class="tab-content code">
+                <div id="desc-fetch" class="tab-pane fade show active" role="tabpanel">
+                </div>
+                <div id="html-fetch" class="tab-pane fade" role="tabpanel">
+                    <pre>
+&lt;div class="form-group"&gt;
+    &lt;label for="myAutocomplete"&gt;Enter Your country:&lt;/label&gt;
+    &lt;input type="text" id="myAutocomplete" autocomplete="off" class="form-control" /&gt;
+&lt;/div&gt;</pre>
+                </div>
+
+                <pre id="js-fetch" class="tab-pane fade" role="tabpanel">
+const getData = async (lookup) =&gt; {
+    try {
+        const response = await fetch(`https://restcountries.eu/rest/v2/name/${lookup}`);
+        const data = await response.json();
+        return data.map(({name,numericCode}) =&gt; ({label: name,value: numericCode}));
+    } catch (error) {
+        console.log(error);
+        alert("HTTP-Error: " + error.status);
+        return {};
+    }
+};
+
+$('#myCountry').autocomplete({
+    fetchSource: getData,
+    treshold: 1,
+    highlightClass: 'text-danger',
+});</pre>
+
+                <pre id="css-fetch" class="tab-pane fade" role="tabpanel"></pre>
+            </div>
+        </div>
     </div>
 
     <!-- Dependencies -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <!-- Bootstrap 4 Autocomplete -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-4-autocomplete/dist/bootstrap-4-autocomplete.min.js" crossorigin="anonymous"></script>
+    <script src="../dist/bootstrap-4-autocomplete.min.js"></script>
+    <script src="./colors.js"></script>
 
     <script>
-
-        var src = {
-            "Bootstrap 4 Autocomplete example": 1,
-            "Best example in the world": 2,
-            "Bootstrap 4 Autocomplete is very nice": 3,
-            "It contains neatly arranged example items": 4,
-            "With many autocomplete values": 5,
-            "And it uses default Bootstrap 4 components": 6,
-            "You can use this example to test": 7,
-        }
-
-        function onSelectItem(item, element) {
-            $('#output').html(
-                'Element <b>' + $(element).attr('id') + '</b> was selected<br/>' +
-                '<b>Value:</b> ' + item.value + ' - <b>Label:</b> ' + item.label
-            );
-        }
-
-        $('#myAutocomplete').autocomplete({
-            source: src,
-            onSelectItem: onSelectItem,
-            highlightClass: 'text-danger'
+        // Basic usage
+        $('#myColor1').autocomplete({
+            source: colors,
+            treshold: 1,
+            maximumItems: 0,
+            highlightClass: 'text-danger',
+            dropdownClass: "scrolled-dropdown"
         });
+
+        // Custom dropdown item element render
+
+        $('#myColor2').autocomplete({
+            source: colors,
+            treshold: 1,
+            highlightClass: 'text-danger',
+            onRenderItem: (item, html) => {
+                let colorBox = $('<span class="myColor"/>').css('background-color', item.value);
+                html.prepend(colorBox);
+            }
+        });
+
+        //
+
+        const getData = async (lookup) => {
+            try {
+                const response = await fetch(`https://restcountries.eu/rest/v2/name/${lookup}`);
+                const data = await response.json();
+                return data.map(({ name, numericCode }) => ({ label: name, value: numericCode }));
+            } catch (error) {
+                console.log(error);
+                alert("HTTP-Error: " + error.message);
+                return {};
+            }
+        };
+
+        $('#myCountry').autocomplete({
+            fetchSource: getData,
+            treshold: 1,
+            highlightClass: 'text-danger',
+        });
+
+        //
     </script>
 </body>
+
 </html>

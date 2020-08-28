@@ -1,0 +1,1247 @@
+[
+    {
+        "label": "Afghanistan",
+        "value": "004",
+        "desc": "Asia / Southern Asia"
+    },
+    {
+        "label": "Åland Islands",
+        "value": "248",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "Albania",
+        "value": "008",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Algeria",
+        "value": "012",
+        "desc": "Africa / Northern Africa"
+    },
+    {
+        "label": "American Samoa",
+        "value": "016",
+        "desc": "Oceania / Polynesia"
+    },
+    {
+        "label": "Andorra",
+        "value": "020",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Angola",
+        "value": "024",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Anguilla",
+        "value": "660",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Antarctica",
+        "value": "010",
+        "desc": " / "
+    },
+    {
+        "label": "Antigua and Barbuda",
+        "value": "028",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Argentina",
+        "value": "032",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Armenia",
+        "value": "051",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Aruba",
+        "value": "533",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Australia",
+        "value": "036",
+        "desc": "Oceania / Australia and New Zealand"
+    },
+    {
+        "label": "Austria",
+        "value": "040",
+        "desc": "Europe / Western Europe"
+    },
+    {
+        "label": "Azerbaijan",
+        "value": "031",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Bahamas",
+        "value": "044",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Bahrain",
+        "value": "048",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Bangladesh",
+        "value": "050",
+        "desc": "Asia / Southern Asia"
+    },
+    {
+        "label": "Barbados",
+        "value": "052",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Belarus",
+        "value": "112",
+        "desc": "Europe / Eastern Europe"
+    },
+    {
+        "label": "Belgium",
+        "value": "056",
+        "desc": "Europe / Western Europe"
+    },
+    {
+        "label": "Belize",
+        "value": "084",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Benin",
+        "value": "204",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Bermuda",
+        "value": "060",
+        "desc": "Americas / Northern America"
+    },
+    {
+        "label": "Bhutan",
+        "value": "064",
+        "desc": "Asia / Southern Asia"
+    },
+    {
+        "label": "Bolivia (Plurinational State of)",
+        "value": "068",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Bonaire, Sint Eustatius and Saba",
+        "value": "535",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Bosnia and Herzegovina",
+        "value": "070",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Botswana",
+        "value": "072",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Bouvet Island",
+        "value": "074",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Brazil",
+        "value": "076",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "British Indian Ocean Territory",
+        "value": "086",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Brunei Darussalam",
+        "value": "096",
+        "desc": "Asia / South-eastern Asia"
+    },
+    {
+        "label": "Bulgaria",
+        "value": "100",
+        "desc": "Europe / Eastern Europe"
+    },
+    {
+        "label": "Burkina Faso",
+        "value": "854",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Burundi",
+        "value": "108",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Cabo Verde",
+        "value": "132",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Cambodia",
+        "value": "116",
+        "desc": "Asia / South-eastern Asia"
+    },
+    {
+        "label": "Cameroon",
+        "value": "120",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Canada",
+        "value": "124",
+        "desc": "Americas / Northern America"
+    },
+    {
+        "label": "Cayman Islands",
+        "value": "136",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Central African Republic",
+        "value": "140",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Chad",
+        "value": "148",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Chile",
+        "value": "152",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "China",
+        "value": "156",
+        "desc": "Asia / Eastern Asia"
+    },
+    {
+        "label": "Christmas Island",
+        "value": "162",
+        "desc": "Oceania / Australia and New Zealand"
+    },
+    {
+        "label": "Cocos (Keeling) Islands",
+        "value": "166",
+        "desc": "Oceania / Australia and New Zealand"
+    },
+    {
+        "label": "Colombia",
+        "value": "170",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Comoros",
+        "value": "174",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Congo",
+        "value": "178",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Congo, Democratic Republic of the",
+        "value": "180",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Cook Islands",
+        "value": "184",
+        "desc": "Oceania / Polynesia"
+    },
+    {
+        "label": "Costa Rica",
+        "value": "188",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Côte d'Ivoire",
+        "value": "384",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Croatia",
+        "value": "191",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Cuba",
+        "value": "192",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Curaçao",
+        "value": "531",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Cyprus",
+        "value": "196",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Czechia",
+        "value": "203",
+        "desc": "Europe / Eastern Europe"
+    },
+    {
+        "label": "Denmark",
+        "value": "208",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "Djibouti",
+        "value": "262",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Dominica",
+        "value": "212",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Dominican Republic",
+        "value": "214",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Ecuador",
+        "value": "218",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Egypt",
+        "value": "818",
+        "desc": "Africa / Northern Africa"
+    },
+    {
+        "label": "El Salvador",
+        "value": "222",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Equatorial Guinea",
+        "value": "226",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Eritrea",
+        "value": "232",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Estonia",
+        "value": "233",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "Eswatini",
+        "value": "748",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Ethiopia",
+        "value": "231",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Falkland Islands (Malvinas)",
+        "value": "238",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Faroe Islands",
+        "value": "234",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "Fiji",
+        "value": "242",
+        "desc": "Oceania / Melanesia"
+    },
+    {
+        "label": "Finland",
+        "value": "246",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "France",
+        "value": "250",
+        "desc": "Europe / Western Europe"
+    },
+    {
+        "label": "French Guiana",
+        "value": "254",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "French Polynesia",
+        "value": "258",
+        "desc": "Oceania / Polynesia"
+    },
+    {
+        "label": "French Southern Territories",
+        "value": "260",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Gabon",
+        "value": "266",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Gambia",
+        "value": "270",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Georgia",
+        "value": "268",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Germany",
+        "value": "276",
+        "desc": "Europe / Western Europe"
+    },
+    {
+        "label": "Ghana",
+        "value": "288",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Gibraltar",
+        "value": "292",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Greece",
+        "value": "300",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Greenland",
+        "value": "304",
+        "desc": "Americas / Northern America"
+    },
+    {
+        "label": "Grenada",
+        "value": "308",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Guadeloupe",
+        "value": "312",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Guam",
+        "value": "316",
+        "desc": "Oceania / Micronesia"
+    },
+    {
+        "label": "Guatemala",
+        "value": "320",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Guernsey",
+        "value": "831",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "Guinea",
+        "value": "324",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Guinea-Bissau",
+        "value": "624",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Guyana",
+        "value": "328",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Haiti",
+        "value": "332",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Heard Island and McDonald Islands",
+        "value": "334",
+        "desc": "Oceania / Australia and New Zealand"
+    },
+    {
+        "label": "Holy See",
+        "value": "336",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Honduras",
+        "value": "340",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Hong Kong",
+        "value": "344",
+        "desc": "Asia / Eastern Asia"
+    },
+    {
+        "label": "Hungary",
+        "value": "348",
+        "desc": "Europe / Eastern Europe"
+    },
+    {
+        "label": "Iceland",
+        "value": "352",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "India",
+        "value": "356",
+        "desc": "Asia / Southern Asia"
+    },
+    {
+        "label": "Indonesia",
+        "value": "360",
+        "desc": "Asia / South-eastern Asia"
+    },
+    {
+        "label": "Iran (Islamic Republic of)",
+        "value": "364",
+        "desc": "Asia / Southern Asia"
+    },
+    {
+        "label": "Iraq",
+        "value": "368",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Ireland",
+        "value": "372",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "Isle of Man",
+        "value": "833",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "Israel",
+        "value": "376",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Italy",
+        "value": "380",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Jamaica",
+        "value": "388",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Japan",
+        "value": "392",
+        "desc": "Asia / Eastern Asia"
+    },
+    {
+        "label": "Jersey",
+        "value": "832",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "Jordan",
+        "value": "400",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Kazakhstan",
+        "value": "398",
+        "desc": "Asia / Central Asia"
+    },
+    {
+        "label": "Kenya",
+        "value": "404",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Kiribati",
+        "value": "296",
+        "desc": "Oceania / Micronesia"
+    },
+    {
+        "label": "Korea (Democratic People's Republic of)",
+        "value": "408",
+        "desc": "Asia / Eastern Asia"
+    },
+    {
+        "label": "Korea, Republic of",
+        "value": "410",
+        "desc": "Asia / Eastern Asia"
+    },
+    {
+        "label": "Kuwait",
+        "value": "414",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Kyrgyzstan",
+        "value": "417",
+        "desc": "Asia / Central Asia"
+    },
+    {
+        "label": "Lao People's Democratic Republic",
+        "value": "418",
+        "desc": "Asia / South-eastern Asia"
+    },
+    {
+        "label": "Latvia",
+        "value": "428",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "Lebanon",
+        "value": "422",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Lesotho",
+        "value": "426",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Liberia",
+        "value": "430",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Libya",
+        "value": "434",
+        "desc": "Africa / Northern Africa"
+    },
+    {
+        "label": "Liechtenstein",
+        "value": "438",
+        "desc": "Europe / Western Europe"
+    },
+    {
+        "label": "Lithuania",
+        "value": "440",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "Luxembourg",
+        "value": "442",
+        "desc": "Europe / Western Europe"
+    },
+    {
+        "label": "Macao",
+        "value": "446",
+        "desc": "Asia / Eastern Asia"
+    },
+    {
+        "label": "Madagascar",
+        "value": "450",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Malawi",
+        "value": "454",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Malaysia",
+        "value": "458",
+        "desc": "Asia / South-eastern Asia"
+    },
+    {
+        "label": "Maldives",
+        "value": "462",
+        "desc": "Asia / Southern Asia"
+    },
+    {
+        "label": "Mali",
+        "value": "466",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Malta",
+        "value": "470",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Marshall Islands",
+        "value": "584",
+        "desc": "Oceania / Micronesia"
+    },
+    {
+        "label": "Martinique",
+        "value": "474",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Mauritania",
+        "value": "478",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Mauritius",
+        "value": "480",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Mayotte",
+        "value": "175",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Mexico",
+        "value": "484",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Micronesia (Federated States of)",
+        "value": "583",
+        "desc": "Oceania / Micronesia"
+    },
+    {
+        "label": "Moldova, Republic of",
+        "value": "498",
+        "desc": "Europe / Eastern Europe"
+    },
+    {
+        "label": "Monaco",
+        "value": "492",
+        "desc": "Europe / Western Europe"
+    },
+    {
+        "label": "Mongolia",
+        "value": "496",
+        "desc": "Asia / Eastern Asia"
+    },
+    {
+        "label": "Montenegro",
+        "value": "499",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Montserrat",
+        "value": "500",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Morocco",
+        "value": "504",
+        "desc": "Africa / Northern Africa"
+    },
+    {
+        "label": "Mozambique",
+        "value": "508",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Myanmar",
+        "value": "104",
+        "desc": "Asia / South-eastern Asia"
+    },
+    {
+        "label": "Namibia",
+        "value": "516",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Nauru",
+        "value": "520",
+        "desc": "Oceania / Micronesia"
+    },
+    {
+        "label": "Nepal",
+        "value": "524",
+        "desc": "Asia / Southern Asia"
+    },
+    {
+        "label": "Netherlands",
+        "value": "528",
+        "desc": "Europe / Western Europe"
+    },
+    {
+        "label": "New Caledonia",
+        "value": "540",
+        "desc": "Oceania / Melanesia"
+    },
+    {
+        "label": "New Zealand",
+        "value": "554",
+        "desc": "Oceania / Australia and New Zealand"
+    },
+    {
+        "label": "Nicaragua",
+        "value": "558",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Niger",
+        "value": "562",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Nigeria",
+        "value": "566",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Niue",
+        "value": "570",
+        "desc": "Oceania / Polynesia"
+    },
+    {
+        "label": "Norfolk Island",
+        "value": "574",
+        "desc": "Oceania / Australia and New Zealand"
+    },
+    {
+        "label": "North Macedonia",
+        "value": "807",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Northern Mariana Islands",
+        "value": "580",
+        "desc": "Oceania / Micronesia"
+    },
+    {
+        "label": "Norway",
+        "value": "578",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "Oman",
+        "value": "512",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Pakistan",
+        "value": "586",
+        "desc": "Asia / Southern Asia"
+    },
+    {
+        "label": "Palau",
+        "value": "585",
+        "desc": "Oceania / Micronesia"
+    },
+    {
+        "label": "Palestine, State of",
+        "value": "275",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Panama",
+        "value": "591",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Papua New Guinea",
+        "value": "598",
+        "desc": "Oceania / Melanesia"
+    },
+    {
+        "label": "Paraguay",
+        "value": "600",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Peru",
+        "value": "604",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Philippines",
+        "value": "608",
+        "desc": "Asia / South-eastern Asia"
+    },
+    {
+        "label": "Pitcairn",
+        "value": "612",
+        "desc": "Oceania / Polynesia"
+    },
+    {
+        "label": "Poland",
+        "value": "616",
+        "desc": "Europe / Eastern Europe"
+    },
+    {
+        "label": "Portugal",
+        "value": "620",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Puerto Rico",
+        "value": "630",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Qatar",
+        "value": "634",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Réunion",
+        "value": "638",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Romania",
+        "value": "642",
+        "desc": "Europe / Eastern Europe"
+    },
+    {
+        "label": "Russian Federation",
+        "value": "643",
+        "desc": "Europe / Eastern Europe"
+    },
+    {
+        "label": "Rwanda",
+        "value": "646",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Saint Barthélemy",
+        "value": "652",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Saint Helena, Ascension and Tristan da Cunha",
+        "value": "654",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Saint Kitts and Nevis",
+        "value": "659",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Saint Lucia",
+        "value": "662",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Saint Martin (French part)",
+        "value": "663",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Saint Pierre and Miquelon",
+        "value": "666",
+        "desc": "Americas / Northern America"
+    },
+    {
+        "label": "Saint Vincent and the Grenadines",
+        "value": "670",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Samoa",
+        "value": "882",
+        "desc": "Oceania / Polynesia"
+    },
+    {
+        "label": "San Marino",
+        "value": "674",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Sao Tome and Principe",
+        "value": "678",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Saudi Arabia",
+        "value": "682",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Senegal",
+        "value": "686",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Serbia",
+        "value": "688",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Seychelles",
+        "value": "690",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Sierra Leone",
+        "value": "694",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Singapore",
+        "value": "702",
+        "desc": "Asia / South-eastern Asia"
+    },
+    {
+        "label": "Sint Maarten (Dutch part)",
+        "value": "534",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Slovakia",
+        "value": "703",
+        "desc": "Europe / Eastern Europe"
+    },
+    {
+        "label": "Slovenia",
+        "value": "705",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Solomon Islands",
+        "value": "090",
+        "desc": "Oceania / Melanesia"
+    },
+    {
+        "label": "Somalia",
+        "value": "706",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "South Africa",
+        "value": "710",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "South Georgia and the South Sandwich Islands",
+        "value": "239",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "South Sudan",
+        "value": "728",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Spain",
+        "value": "724",
+        "desc": "Europe / Southern Europe"
+    },
+    {
+        "label": "Sri Lanka",
+        "value": "144",
+        "desc": "Asia / Southern Asia"
+    },
+    {
+        "label": "Sudan",
+        "value": "729",
+        "desc": "Africa / Northern Africa"
+    },
+    {
+        "label": "Suriname",
+        "value": "740",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Svalbard and Jan Mayen",
+        "value": "744",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "Sweden",
+        "value": "752",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "Switzerland",
+        "value": "756",
+        "desc": "Europe / Western Europe"
+    },
+    {
+        "label": "Syrian Arab Republic",
+        "value": "760",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Taiwan, Province of China",
+        "value": "158",
+        "desc": "Asia / Eastern Asia"
+    },
+    {
+        "label": "Tajikistan",
+        "value": "762",
+        "desc": "Asia / Central Asia"
+    },
+    {
+        "label": "Tanzania, United Republic of",
+        "value": "834",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Thailand",
+        "value": "764",
+        "desc": "Asia / South-eastern Asia"
+    },
+    {
+        "label": "Timor-Leste",
+        "value": "626",
+        "desc": "Asia / South-eastern Asia"
+    },
+    {
+        "label": "Togo",
+        "value": "768",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Tokelau",
+        "value": "772",
+        "desc": "Oceania / Polynesia"
+    },
+    {
+        "label": "Tonga",
+        "value": "776",
+        "desc": "Oceania / Polynesia"
+    },
+    {
+        "label": "Trinidad and Tobago",
+        "value": "780",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Tunisia",
+        "value": "788",
+        "desc": "Africa / Northern Africa"
+    },
+    {
+        "label": "Turkey",
+        "value": "792",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Turkmenistan",
+        "value": "795",
+        "desc": "Asia / Central Asia"
+    },
+    {
+        "label": "Turks and Caicos Islands",
+        "value": "796",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Tuvalu",
+        "value": "798",
+        "desc": "Oceania / Polynesia"
+    },
+    {
+        "label": "Uganda",
+        "value": "800",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Ukraine",
+        "value": "804",
+        "desc": "Europe / Eastern Europe"
+    },
+    {
+        "label": "United Arab Emirates",
+        "value": "784",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "United Kingdom of Great Britain and Northern Ireland",
+        "value": "826",
+        "desc": "Europe / Northern Europe"
+    },
+    {
+        "label": "United States of America",
+        "value": "840",
+        "desc": "Americas / Northern America"
+    },
+    {
+        "label": "United States Minor Outlying Islands",
+        "value": "581",
+        "desc": "Oceania / Micronesia"
+    },
+    {
+        "label": "Uruguay",
+        "value": "858",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Uzbekistan",
+        "value": "860",
+        "desc": "Asia / Central Asia"
+    },
+    {
+        "label": "Vanuatu",
+        "value": "548",
+        "desc": "Oceania / Melanesia"
+    },
+    {
+        "label": "Venezuela (Bolivarian Republic of)",
+        "value": "862",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Viet Nam",
+        "value": "704",
+        "desc": "Asia / South-eastern Asia"
+    },
+    {
+        "label": "Virgin Islands (British)",
+        "value": "092",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Virgin Islands (U.S.)",
+        "value": "850",
+        "desc": "Americas / Latin America and the Caribbean"
+    },
+    {
+        "label": "Wallis and Futuna",
+        "value": "876",
+        "desc": "Oceania / Polynesia"
+    },
+    {
+        "label": "Western Sahara",
+        "value": "732",
+        "desc": "Africa / Northern Africa"
+    },
+    {
+        "label": "Yemen",
+        "value": "887",
+        "desc": "Asia / Western Asia"
+    },
+    {
+        "label": "Zambia",
+        "value": "894",
+        "desc": "Africa / Sub-Saharan Africa"
+    },
+    {
+        "label": "Zimbabwe",
+        "value": "716",
+        "desc": "Africa / Sub-Saharan Africa"
+    }
+]
