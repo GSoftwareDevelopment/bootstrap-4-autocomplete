@@ -1,9 +1,9 @@
 {
-  "name": "bootstrap-4-autocomplete",
-  "version": "1.2.3",
+  "name": "bs4-autocomplete",
+  "version": "2.0.0",
   "description": "A simple autocomplete/typeahead for Bootstrap 4 and jQuery",
-  "main": "dist/bootstrap-4-autocomplete.js",
-  "typings": "dist/bootstrap-4-autocomplete.d.ts",
+  "main": "dist/bs4-autocomplete.js",
+  "typings": "dist/bs4-autocomplete.d.ts",
   "scripts": {
     "build": "gulp",
     "test": "echo \"No test specified\"",
@@ -17,9 +17,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Honatas/bootstrap-4-autocomplete"
+    "url": "https://github.com/GSoftwareDevelopment/bs4-autocomplete"
   },
-  "author": "Jonatas de Moraes Junior",
+  "author": "Paweł Banaś",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.3.1",

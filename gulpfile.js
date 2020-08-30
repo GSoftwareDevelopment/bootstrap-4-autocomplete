@@ -19,9 +19,9 @@ function compile() {
 }
 
 function min() {
-    return src(target + '/bootstrap-4-autocomplete.js')
+    return src(target + '/bs4-autocomplete.js')
         .pipe(uglify())
-        .pipe(rename('bootstrap-4-autocomplete.min.js'))
+        .pipe(rename('bs4-autocomplete.min.js'))
         .pipe(dest(target));
 }
 

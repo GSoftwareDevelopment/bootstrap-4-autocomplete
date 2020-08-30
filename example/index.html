@@ -34,6 +34,8 @@
 
     .code {
         border-bottom: #ddd solid 1px;
+        background-color: #fff;
+        padding: 10px;
     }
 
     pre {
@@ -72,6 +74,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#example-basic">Basic usage</a>
+                        <a class="dropdown-item" href="#example-compare">Own compare function</a>
                         <a class="dropdown-item" href="#example-render">Custom render</a>
                         <a class="dropdown-item" href="#example-fetch">Fetch source</a>
                     </div>
@@ -80,13 +83,40 @@
         </div>
     </nav>
 
-    <div id="home" class="page bg-info text-white">
+    <div id="home" class="page bg-info">
         <div class="container">
             <div class="jumbotron text-dark mt-5">
-                <h1 class="display-4">Simple & lightweight<br>Autocomplete</h1>
-                <p class="lead">Make life easer with ease autocomplete component</p>
-                <hr class="my-4">
-                <a class="btn btn-primary btn-lg" href="#example-basic" role="button">See examples</a>
+                <h1 class="display-5">Make life easier with<br>Ease autocomplete component</h1>
+
+                <div class="row mt-4 text-center">
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Easy in use</h5>
+                                <p class="card-text">See the examples and see how easy it is to use the component.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Small size</h5>
+                                <p class="card-text">The main file is approx. 2 KB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Typescript support</h5>
+                                <p class="card-text">If your project uses Typescript, BS4 Autocomplete has type
+                                    definitions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-outline-primary btn-lg mt-4" href="#example-basic" role="button">See
+                    examples</a>
             </div>
         </div>
     </div>
@@ -113,11 +143,11 @@
             <dl class="row">
                 <dt class="col-sm-3">compareFn<span class="ml-1 badge badge-info">New</span></dt>
                 <dd class="col-sm-9">
-                    <p>By default, the process of generating a dropdown list is based on checking whether the text
+                    <!-- <p>By default, the process of generating a dropdown list is based on checking whether the text
                         entered in the text field is
                         contained in any of the elements of the autocomplete list. In short, the condition is:</p>
                     <code>
-compare = item.label.toLowerCase().indexOf(lookup.toLowerCase()) >= 0;
+item.label.toLowerCase().indexOf(lookup.toLowerCase()) >= 0;
                     </code>
                     <p>Where:
                     <dl class="row">
@@ -127,12 +157,13 @@ compare = item.label.toLowerCase().indexOf(lookup.toLowerCase()) >= 0;
                         <dt class="col-sm-2">lookup</dt>
                         <dd class="col-sm-10">string from text input</dd>
                     </dl>
-                    </p>
+                    </p> -->
                     <p>By defining a callback function, you can define your own rules for selecting items for the
-                        dropdown
-                        list, e.g.</p>
-                    <pre>
-const myCompareFn=(lookup,item) =&gt; item.label.toLowerCase().startsWith(lookup.toLowerCase());
+                        dropdown list.</p>
+                    <h5 class="border-bottom">Parameters and returns</h5>
+                    <p>A parameter with the content from the text field is passed to the function.</p>
+                    <!-- <pre>
+const myCompareFn=;
 
 $('#myAutocomplete').autocomplete({
     compareFn:myCompareFn
@@ -141,7 +172,7 @@ $('#myAutocomplete').autocomplete({
                     <p>
                         in the example above, dropdown list items will be matched by comparing them strings
                         from the beginning.
-                    </p>
+                    </p> -->
                 </dd>
 
                 <dt class="col-sm-3">dropdownClass<span class="ml-1 badge badge-info">New</span></dt>
@@ -193,7 +224,7 @@ $('#myAutocomplete').autocomplete({
                         allow you to generate an
                         auto-complete list by sending a request.</p>
 
-                    <h5>Parameters and returns:</h5>
+                    <h5 class="border-bottom">Parameters and returns</h5>
                     <p>A parameter with the content from the text field is passed to the function.</p>
                     <p>The function returns an array of objects (see the description of the source property)</p>
 
@@ -204,7 +235,7 @@ $('#myAutocomplete').autocomplete({
                 <dd class="col-sm-9">
                     <p>The callback function that is called on each matching autocomplete list item. It allows you to
                         program your own way of rendering list items.</p>
-                    <h5>Parameters:</h5>
+                    <h5 class="border-bottom">Parameters</h5>
                     <p>The functions passed are the current (matching) autocomplete list item and the HTML dropdown list
                         item.</p>
 
@@ -216,7 +247,7 @@ $('#myAutocomplete').autocomplete({
                 <dt class="col-sm-3 text-muted">onSelectItem</dt>
                 <dd class="col-sm-9">
                     <p>A callback that is fired every time an item is selected.</p>
-                    <h4>Parameters:</h4>
+                    <h5 class="border-bottom">Parameters</h5>
                     <p>It receives two parameters: the first is the selected item, the second is the textfield element.
                     </p>
                     <p>Note that you don't have to use this callback to set the text in the textfield, this is done
@@ -252,7 +283,17 @@ $('#myAutocomplete').autocomplete({
         </div>
     </div>
 
-    <div id="example-basic" class="page bg-light">
+    <div id="about" class="bg-info text-white">
+        <div class="container">
+            <h2>Examples</h2>
+        </div>
+    </div>
+
+    <!-- Examples section -->
+
+    <!-- -->
+
+    <div id="example-basic" class="page">
         <div class="container">
             <h3>Basic usage:</h3>
             <div class="form-group">
@@ -308,6 +349,60 @@ $('#myAutocomplete').autocomplete({
         </div>
     </div>
 
+    <!-- -->
+
+    <div id="example-compare" class="page bg-light">
+        <div class="container">
+            <h3>Custom compare function:</h3>
+            <div class="form-group">
+                <label for="myColor3">Enter color you like:</label>
+                <input tabindex=1 type="text" id="myColor3" autocomplete="off" class="form-control" />
+            </div>
+
+            <hr>
+
+            <div class="nav nav-tabs" role="tablist">
+                <a href="#desc-compare" class="nav-link active" data-toggle="list" role="tab">Description</a>
+                <a href="#html-compare" class="nav-link" data-toggle="list" role="tab">HTML</a>
+                <a href="#js-compare" class="nav-link" data-toggle="list" role="tab">JS</a>
+                <a href="#css-compare" class="nav-link" data-toggle="list" role="tab">CSS</a>
+            </div>
+            <div class="tab-content code">
+                <div id="desc-compare" class="tab-pane fade show active" role="tabpanel">
+                    <div>
+                    </div>
+                </div>
+                <div id="html-compare" class="tab-pane fade" role="tabpanel">
+                    <pre>
+    &lt;script src="./colors.js"&gt;&lt;/script&gt;
+    
+    &lt;div class="form-group"&gt;
+        &lt;label for="myAutocomplete"&gt;Enter color you like:&lt;/label&gt;
+        &lt;input type="text" id="myAutocomplete" autocomplete="off" class="form-control" /&gt;
+    &lt;/div&gt;</pre>
+                </div>
+
+                <pre id="js-compare" class="tab-pane fade" role="tabpanel">
+    $('#myAutocomplete').autocomplete({
+        compareFn: (lookup,item) =&gt; item.label.toLowerCase().startsWith(lookup.toLowerCase()),
+        source: colors,
+        treshold: 1,
+        maximumItems: 0,
+        highlightClass: 'text-danger',
+        dropdownClass: 'scrolled-dropdown'
+    });</pre>
+
+                <pre id="css-compare" class="tab-pane fade" role="tabpanel">
+    .scrolled-dropdown {
+        max-height: 200px;
+        overflow-y: auto;
+    }</pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- -->
+
     <div id="example-render" class="page">
         <div class="container">
             <h3>Custom dropdown item element render:</h3>
@@ -327,13 +422,7 @@ $('#myAutocomplete').autocomplete({
             </div>
             <div class="tab-content code">
                 <div id="desc-render" class="tab-pane fade show active" role="tabpanel">
-                    <div class="alert alert-info">
-                        <p class="mb-0">Due to the large size of the file, the definition of the variable
-                            'color' is
-                            included as an
-                            external file. You can see
-                            it <a href="./colors.js" target="_blank">here</a>.</p>
-                    </div>
+
                 </div>
                 <div id="html-render" class="tab-pane fade" role="tabpanel">
                     <pre>
@@ -368,6 +457,8 @@ $('#myAutocomplete').autocomplete({
         </div>
     </div>
 
+    <!-- -->
+
     <div id="example-fetch" class="page bg-light">
         <div class="container">
             <h3>Fetch source data for autocomplete:</h3>
@@ -387,6 +478,7 @@ $('#myAutocomplete').autocomplete({
             </div>
             <div class="tab-content code">
                 <div id="desc-fetch" class="tab-pane fade show active" role="tabpanel">
+
                 </div>
                 <div id="html-fetch" class="tab-pane fade" role="tabpanel">
                     <pre>
@@ -421,6 +513,7 @@ $('#myCountry').autocomplete({
     </div>
 
     <!-- Dependencies -->
+
     <script src="./js/jquery.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
@@ -448,6 +541,17 @@ $('#myCountry').autocomplete({
                 let colorBox = $('<span class="myColor"/>').css('background-color', item.value);
                 html.prepend(colorBox);
             }
+        });
+
+        // Custom compare function
+
+        $('#myColor3').autocomplete({
+            compareFn: (lookup, item) => item.label.toLowerCase().startsWith(lookup.toLowerCase()),
+            source: colors,
+            treshold: 1,
+            maximumItems: 0,
+            highlightClass: 'text-danger',
+            dropdownClass: "scrolled-dropdown"
         });
 
         //
