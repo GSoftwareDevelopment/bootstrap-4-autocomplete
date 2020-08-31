@@ -6,7 +6,7 @@
   "typings": "dist/bs4-autocomplete.d.ts",
   "homepage": "https://gsoftwaredevelopment.github.io/bs4autocomplete/index.html",
   "scripts": {
-    "build": "gulp",
+    "build": "gulp"
   },
   "keywords": [
     "bootstrap",
