@@ -4,10 +4,9 @@
   "description": "A simple autocomplete/typeahead for Bootstrap 4 and jQuery",
   "main": "dist/bs4-autocomplete.js",
   "typings": "dist/bs4-autocomplete.d.ts",
+  "homepage": "https://gsoftwaredevelopment.github.io/bs4autocomplete/index.html",
   "scripts": {
     "build": "gulp",
-    "test": "echo \"No test specified\"",
-    "deliver": "np"
   },
   "keywords": [
     "bootstrap",
@@ -19,7 +18,7 @@
     "type": "git",
     "url": "https://github.com/GSoftwareDevelopment/bs4-autocomplete"
   },
-  "author": "Paweł Banaś",
+  "author": "PeBe",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.3.1",
