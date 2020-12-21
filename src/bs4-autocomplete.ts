@@ -72,7 +72,7 @@ interface JQuery {
                 compare = entry.label.toLowerCase().indexOf(lookup.toLowerCase()) >= 0;
             }
             if (compare) {
-                let itemHTML = $(`<button type="button" class="dropdown-item ${opts.labelClass ? ${opts.labelClass}` : ``}" data-value="${entry.value}" />`);
+                let itemHTML = $(`<button type="button" class="dropdown-item ${opts.labelClass ? `${opts.labelClass}` : ``}" data-value="${entry.value}" />`);
 
                 let valueHTML = createItem(lookup, entry, opts);
                 itemHTML.append(valueHTML);
